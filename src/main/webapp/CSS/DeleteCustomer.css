@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Main Container */
+.main_box {
+    display: flex;
+    position: relative;
+}
+
+/* Sidebar Menu */
+.sidebar_menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 2000;
+}
+
+.sidebar_menu .logo {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar_menu .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar_menu .menu {
+    margin-top: 20px;
+}
+
+.sidebar_menu .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar_menu .menu ul li {
+    border-bottom: 1px solid #444;
+}
+
+.sidebar_menu .menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar_menu .menu ul li a:hover {
+    background-color: #555;
+}
+
+.sidebar_menu .menu ul li .dropdown-content {
+    display: none;
+    background-color: #444;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    width: 250px;
+}
+
+.sidebar_menu .menu ul li:hover .dropdown-content {
+    display: block;
+}
+
+.sidebar_menu .social_media {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.sidebar_menu .social_media ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.sidebar_menu .social_media ul a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.sidebar_menu .social_media ul a:hover {
+    color: #ccc;
+}
+
+/* Sidebar Toggle Button */
+.btn_one, .btn_two {
+    position: fixed;
+    top: 20px;
+    z-index: 2100;
+}
+
+.btn_one {
+    left: 20px;
+}
+
+.btn_two {
+    left: 270px; /* Adjusted to be outside the sidebar */
+}
+
+.btn_one label, .btn_two label {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Form Styling */
+form {
+    margin-left: 270px; /* Adjust to provide enough space for sidebar */
+    padding: 20px;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 20px; /* Adjust to align with other content */
+}
+
+form input[type="text"] {
+    width: calc(100% - 22px); /* Adjust width considering padding */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Space between input fields */
+    display: block;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
